@@ -1,9 +1,12 @@
 Goal: To identify the specific mutation responsible for the visible miniature phenotype in Drosophila melanogaster and understand how that mutation leads to the observed physical changes.
-Step 1: Upload the DNA sequence file (.ab1) to the Sabine terminal using scp so it can be accessed and analyzed during the bioinformatics workflow. 
--- This was done on the MacBook terminal using: scp MUT-G44.ab1 pcshedr2@sabine.rcdc.uh.edu:/project/stuckert/pcshedr2/Final_Project/
+Step 1: Upload the DNA sequence files (including the wild-type, mutant, and the ref genotype) (.ab1) to the Sabine terminal using scp so they can be accessed and analyzed during the bioinformatics workflow. 
+-- This was done on the MacBook terminal using: scp MUT-G44.ab1 pcshedr2@sabine.rcdc.uh.edu:/project/stuckert/pcshedr2/Final_Project/ (mutant sequence)
+-- for the wild-type sequence: scp ~/Downloads/WT-G44.ab1 pcshedr2@sabine.rcdc.uh.edu:/project/stuckert/pcshedr2/Final_Project/ (wild-type sequence)
 Step 2: Convert the .ab1 files to FASTA files
 -- I used Biopython as it can read .ab1 files directly and convert them to FASTA. 
 ---- Biopython was not installed on my terminal, so I installed it with: python -m pip install --user biopython (output: successfully installed biopython-1.85)
--- Now, to convert the .ab1 file to FASTA, the following command was used: python -c "from Bio import SeqIO; SeqIO.convert('MUT-G44.ab1', 'abi', 'miniature.fasta', 'fasta')"
+-- Now, to convert the .ab1 file to FASTA, the following command was used: python -c "from Bio import SeqIO; SeqIO.convert('MUT-G44.ab1', 'abi', 'miniature.fasta', 'fasta')."
+-----------python -c "from Bio import SeqIO; SeqIO.convert('WT-G44.ab1', 'abi', 'Wild-type.fasta', 'fasta')." 
 -- I used dos2unix to convert Windows-style line endings (CRLF) into Unix-style line endings (LF), which helps when files are transferred between systems. 
+
 
