@@ -1,3 +1,4 @@
 Goal: To identify the specific mutation responsible for the visible miniature phenotype in Drosophila melanogaster and understand how that mutation leads to the observed physical changes.
 Step 1: Upload the DNA sequence file (.ab1) to the Sabine terminal using scp so it can be accessed and analyzed during the bioinformatics workflow. 
-
+--This was done on the MacBook terminal using: scp MUT-G44.ab1 pcshedr2@sabine.rcdc.uh.edu:/project/stuckert/pcshedr2/Final_Project/
+Step 2: Convert the .ab1 files to FASTA files
